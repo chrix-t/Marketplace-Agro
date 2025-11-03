@@ -1,29 +1,108 @@
-[README.txt](https://github.com/user-attachments/files/23306752/README.txt)
-REMIX DEFAULT WORKSPACE
+# 🌾 Agricultura Marketplace
 
-Remix default workspace is present when:
-i. Remix loads for the very first time 
-ii. A new workspace is created with 'Default' template
-iii. There are no files existing in the File Explorer
+Plataforma de compra y venta de productos agrícolas construida con Next.js, TypeScript y Tailwind CSS.
 
-This workspace contains 3 directories:
+## 🚀 Características
 
-1. 'contracts': Holds three contracts with increasing levels of complexity.
-2. 'scripts': Contains four typescript files to deploy a contract. It is explained below.
-3. 'tests': Contains one Solidity test file for 'Ballot' contract & one JS test file for 'Storage' contract.
+- ✅ Catálogo de productos agrícolas con categorías
+- ✅ Búsqueda y filtrado de productos
+- ✅ Páginas de detalle de productos y categorías
+- ✅ Sistema de vendedores con calificaciones
+- ✅ Diseño responsive y moderno
+- ✅ Interfaz intuitiva y fácil de usar
 
-SCRIPTS
+## 🛠️ Tecnologías Utilizadas
 
-The 'scripts' folder has four typescript files which help to deploy the 'Storage' contract using 'web3.js' and 'ethers.js' libraries.
+- **Next.js 16** - Framework de React
+- **TypeScript** - Tipado estático
+- **Tailwind CSS 4** - Estilos utilitarios
+- **App Router** - Sistema de enrutamiento de Next.js
 
-For the deployment of any other contract, just update the contract name from 'Storage' to the desired contract and provide constructor arguments accordingly 
-in the file `deploy_with_ethers.ts` or  `deploy_with_web3.ts`
+## 📦 Estructura del Proyecto
 
-In the 'tests' folder there is a script containing Mocha-Chai unit tests for 'Storage' contract.
+```
+agricultura-marketplace/
+├── app/                    # Páginas y rutas
+│   ├── productos/         # Páginas de productos
+│   ├── categorias/        # Páginas de categorías
+│   └── vender/            # Formulario para vender
+├── components/            # Componentes reutilizables
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── ProductCard.tsx
+│   └── CategoryCard.tsx
+├── lib/                   # Utilidades y datos
+│   └── data.ts           # Datos de ejemplo
+└── types/                # Tipos TypeScript
+    └── index.ts
+```
 
-To run a script, right click on file name in the file explorer and click 'Run'. Remember, Solidity file must already be compiled.
-Output from script will appear in remix terminal.
+## 🚦 Comenzar
 
-Please note, require/import is supported in a limited manner for Remix supported modules.
-For now, modules supported by Remix are ethers, web3, swarmgw, chai, multihashes, remix and hardhat only for hardhat.ethers object/plugin.
-For unsupported modules, an error like this will be thrown: '<module_name> module require is not supported by Remix IDE' will be shown.
+### Instalación
+
+Las dependencias ya están instaladas. Si necesitas reinstalar:
+
+```bash
+npm install
+```
+
+### Ejecutar en Desarrollo
+
+```bash
+npm run dev
+```
+
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
+
+### Compilar para Producción
+
+```bash
+npm run build
+npm start
+```
+
+## 📄 Páginas Disponibles
+
+- **/** - Página principal con productos destacados y categorías
+- **/productos** - Listado completo de productos con filtros
+- **/productos/[id]** - Detalle de un producto específico
+- **/categorias** - Listado de todas las categorías
+- **/categorias/[id]** - Productos de una categoría específica
+- **/vender** - Formulario para publicar un nuevo producto
+
+## 🎨 Categorías de Productos
+
+1. 🍎 **Frutas** - Frutas frescas de temporada
+2. 🥬 **Verduras** - Verduras orgánicas y frescas
+3. 🌾 **Granos** - Granos básicos y cereales
+4. 🫘 **Legumbres** - Legumbres secas y frescas
+5. 🌱 **Semillas** - Semillas para siembra
+6. 🌿 **Hierbas** - Hierbas aromáticas y medicinales
+
+## 🔧 Características Técnicas
+
+- Sistema de tipos TypeScript completo para productos agrícolas
+- Componentes modulares y reutilizables
+- Optimización de imágenes con Next.js Image
+- Diseño responsive con Tailwind CSS
+- Navegación con Next.js App Router
+
+## 📝 Próximas Mejoras
+
+- [ ] Sistema de autenticación de usuarios
+- [ ] Carrito de compras funcional
+- [ ] Sistema de pagos
+- [ ] Gestión de órdenes
+- [ ] Panel de administración para vendedores
+- [ ] Sistema de búsqueda avanzada
+- [ ] Integración con base de datos
+- [ ] Sistema de reseñas y comentarios
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+---
+
+Desarrollado con ❤️ para conectar productores y compradores agrícolas.
